@@ -32,17 +32,11 @@ log_mod.fit(X_train, y_train)
 
 def predicting():
     try :
-        global Age
         Age = int(e1.get())
-        global DistanceFromHome 
         DistanceFromHome = int(e2.get())
-        global EnvironmentSatisfaction 
         EnvironmentSatisfaction = int(e3.get())
-        global HourlyRate 
         HourlyRate = int(e4.get())
-        global JobSatisfaction 
         JobSatisfaction = int(e5.get())
-        global PerformanceRating 
         PerformanceRating = int(e6.get())
         Test_conf = log_mod.predict_proba([[Age,DistanceFromHome,EnvironmentSatisfaction,HourlyRate,JobSatisfaction,PerformanceRating]])
         ix = Test_conf.argmax(1).item()
